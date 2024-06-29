@@ -338,14 +338,14 @@ class Myhome extends StatelessWidget {
                         Text(
                           "Cash withdrawal",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Color(0xd9525050),
                               fontWeight: FontWeight.bold,
                               fontSize: 24),
                         ),
                         Text(
                           "11.11.24.Sept",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Color(0xd9525050),
                               fontWeight: FontWeight.bold,
                               fontSize: 18),
                         ),
@@ -355,7 +355,7 @@ class Myhome extends StatelessWidget {
                   const SizedBox(),
                   const Text(
                     "\$ 540",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    style: TextStyle(color:Color(0xd9525050),fontSize: 24, fontWeight: FontWeight.bold),
                   )
                 ],
               ),
@@ -399,14 +399,14 @@ class Myhome extends StatelessWidget {
                         Text(
                           "Payment",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Color(0xd9525050),
                               fontWeight: FontWeight.bold,
                               fontSize: 24),
                         ),
                         Text(
                           "11.11.24.Sept",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Color(0xd9525050),
                               fontWeight: FontWeight.bold,
                               fontSize: 18),
                         ),
@@ -418,7 +418,7 @@ class Myhome extends StatelessWidget {
                   ),
                   const Text(
                     "\$ 456",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    style: TextStyle(color:Color(0xd9525050),fontSize: 24, fontWeight: FontWeight.bold),
                   )
                 ],
               ),
@@ -462,14 +462,14 @@ class Myhome extends StatelessWidget {
                         Text(
                           "Monthly Subscribe",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Color(0xd9525050),
                               fontWeight: FontWeight.bold,
                               fontSize: 24),
                         ),
                         Text(
                           "11.11.24.Sept",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Color(0xd9525050),
                               fontWeight: FontWeight.bold,
                               fontSize: 18),
                         ),
@@ -479,7 +479,7 @@ class Myhome extends StatelessWidget {
                   // const SizedBox(),
                   const Text(
                     "\$ 540",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    style: TextStyle(color: Color(0xd9525050),fontSize: 24, fontWeight: FontWeight.bold),
                   )
                 ],
               ),
@@ -523,14 +523,14 @@ class Myhome extends StatelessWidget {
                         Text(
                           "Grocery Store",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Color(0xd9525050),
                               fontWeight: FontWeight.bold,
                               fontSize: 24),
                         ),
                         Text(
                           "11.11.24.Sept",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Color(0xd9525050),
                               fontWeight: FontWeight.bold,
                               fontSize: 18),
                         ),
@@ -542,7 +542,7 @@ class Myhome extends StatelessWidget {
                   ),
                   const Text(
                     "\$ 540",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    style: TextStyle(color:Color(0xd9525050),fontSize: 24, fontWeight: FontWeight.bold),
                   )
                 ],
               ),
