@@ -328,7 +328,7 @@ class Myhome extends StatelessWidget {
                 trailing: Text("\$ 546",style: TextStyle(color:Color(0xd9353434),fontWeight: FontWeight.bold,fontSize: 18),),
               ),
                const Padding(
-                 padding: const EdgeInsets.only(left: 48.0,top: 20,bottom: 20),
+                 padding: const EdgeInsets.only(left: 48.0,top: 10,bottom: 10),
                  child: const DottedLine(
                    alignment: WrapAlignment.end,
                     lineThickness: 3,
@@ -353,7 +353,7 @@ class Myhome extends StatelessWidget {
                 trailing: const Text("\$ 456",style: TextStyle(color:Color(0xd9353434),fontWeight: FontWeight.bold,fontSize: 18),),
               ),
               const Padding(
-                padding: const EdgeInsets.only(left: 48.0,top: 20,bottom: 20),
+                padding: const EdgeInsets.only(left: 48.0,top: 10,bottom: 10),
                 child: const DottedLine(
                   alignment: WrapAlignment.end,
                   lineThickness: 3,
@@ -378,7 +378,7 @@ class Myhome extends StatelessWidget {
                 trailing: Text("\$ 789",style: TextStyle(color:Color(0xd9353434),fontWeight: FontWeight.bold,fontSize: 18),),
               ),
               const Padding(
-                padding: const EdgeInsets.only(left: 48.0,top: 20,bottom: 20),
+                padding: const EdgeInsets.only(left: 48.0,top: 10,bottom: 10),
                 child: const DottedLine(
                   alignment: WrapAlignment.end,
                   lineThickness: 3,
