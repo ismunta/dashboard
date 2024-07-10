@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:dotted_line/dotted_line.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Myhome extends StatelessWidget {
   const Myhome({super.key});
@@ -8,157 +9,159 @@ class Myhome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView(
-      children: [
-        Container(
-          child: Column(
+      body: Column(
             children: [
-              // Padding(
-              //   padding: const EdgeInsets.all(8.0),
-              //   child:
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 300,
+                height: 185,
                 decoration: const BoxDecoration(
                     borderRadius: BorderRadius.vertical(
-                        bottom: Radius.elliptical(190, 145)),
+                        bottom: Radius.elliptical(205, 100)),
                     color: Color(0xc21921ce),
                     boxShadow: [
                       BoxShadow(
-                          offset: Offset(6, 12),
-                          //blurStyle: BlurStyle.outer,
-                          blurRadius: 2,
+                          offset: Offset(7, 10),
+                          blurRadius: 0.5,
                           color: Color(0xd9d6d0d0),
-                          spreadRadius: 7)
+                          spreadRadius: 3)
                     ]),
-                child: Column(
+                child: Wrap(
+                  direction: flipAxis(Axis.horizontal),
                   children: [
-                    Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Container(
-                              width: 120,
-                              height: 100,
-                              decoration: const BoxDecoration(
-                                  color: Color(0x60060962),
-                                  borderRadius: BorderRadius.only(
-                                      bottomRight: Radius.elliptical(90, 100))),
-                              child: const Padding(
-                                padding: const EdgeInsets.only(right: 38.0),
-                                child: const Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Icon(
-                                      FontAwesomeIcons.times,
-                                      size: 42,
-                                      color: Colors.white,
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(right: 42.0),
-                                      child: DottedLine(
-                                        alignment: WrapAlignment.end,
-                                        dashLength: 6,
-                                        direction: Axis.vertical,
-                                        dashColor: Color(0xc97fa2da),
-                                        lineLength: 50,
-                                        lineThickness: 4,
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
-                            const Padding(
-                              padding: const EdgeInsets.only(right: 12.0),
-                              child: Row(
+                       Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Container(
+                            width: 95,
+                            height: 90,
+                            decoration: const BoxDecoration(
+                                color: Color(0x60060962),
+                                borderRadius: BorderRadius.only(
+                                    bottomRight: Radius.elliptical(90, 100))),
+                            child: const Padding(
+                              padding: EdgeInsets.only(right: 38.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text(
-                                    "John Doe",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18),
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
                                   Icon(
-                                    FontAwesomeIcons.solidUserCircle,
+                                    FontAwesomeIcons.times,
+                                    size: 22,
                                     color: Colors.white,
-                                    size: 25,
                                   ),
+                                  Padding(
+                                    padding: EdgeInsets.only(right: 42.0),
+                                    child: DottedLine(
+                                      alignment: WrapAlignment.end,
+                                      dashLength: 4,
+                                      direction: Axis.vertical,
+                                      dashColor: Color(0xc97fa2da),
+                                      lineLength: 30,
+                                      lineThickness: 4,
+                                    ),
+                                  )
                                 ],
                               ),
-                            )
-                          ],
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 28.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
+                            ),
+                          ),
+                        ],
+                      ),
+                       Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20.0,left: 78),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "Issahaku Mutaka",
+                                  style: GoogleFonts.openSans(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12),
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                const Icon(
+                                  FontAwesomeIcons.solidUserCircle,
+                                  color: Colors.white,
+                                  size: 25,
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(height: 10,),
+                          Row(
+                            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              const Column(
+                              Column(
                                 children: [
                                   const Text(
                                     "Current Balance",
                                     style: TextStyle(color: Colors.white),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: const Text(
+                                  const Padding(
+                                    padding: EdgeInsets.all(4.0),
+                                    child: Text(
                                       "\$ 1,234.56",
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: 32,
+                                          fontSize: 22,
                                           fontWeight: FontWeight.bold),
                                     ),
                                   ),
-                                  Text(
-                                    "Lorep Ipsum sosoo communiication adipciting asa\n"
-                                    "swad to bug skdss dsoos sds sd \n"
-                                    "thhre nsdnsdsdjnsjsnjndjsnjsdndhjshds",
-                                    style: TextStyle(color: Colors.white),
+                                  const SizedBox(height: 10,),
+                                  FittedBox(
+                                    //clipBehavior: Clip.hardEdge,
+                                    //fit: BoxFit.contain,
+                                    child: Text(
+                                      "Lorep Ipsum sosoo communiication adipciting\n"
+                                          "swad to bug skdss dsoos sds sd \n"
+                                          "thhre nsdnsdsdjnsjsnjndjsnjsdndhjshds",
+                                      style: GoogleFonts.openSans(
+                                          color: Colors.white, fontSize: 8),
+                                      textAlign: TextAlign.center,
+                                    ),
                                   ),
                                 ],
                               ),
+                              const SizedBox(width: 70,),
                               Padding(
-                                padding: const EdgeInsets.only(bottom: 58.0),
+                                padding: const EdgeInsets.only(bottom: 18.0),
                                 child: Container(
-                                  height: 90,
-                                  width: 40,
+                                  height: 70,
+                                  width: 35,
                                   decoration: const BoxDecoration(
                                     color: Color(0xc910259a),
                                     borderRadius: BorderRadius.horizontal(
                                         left: Radius.circular(50)),
                                   ),
                                   child: const Padding(
-                                    padding: const EdgeInsets.all(14.0),
+                                    padding: EdgeInsets.all(14.0),
                                     child: DottedLine(
                                       dashGapLength: 5,
                                       dashRadius: 2,
                                       dashColor: Color(0xc97fa2da),
-                                      dashLength: 5,
+                                      dashLength: 3,
                                       direction: Axis.vertical,
-                                      lineLength: 45,
-                                      lineThickness: 4,
+                                      lineLength: 35,
+                                      lineThickness: 2,
                                     ),
                                   ),
                                 ),
-                              )
+                              ),
                             ],
                           ),
-                        ),
-                      ],
-                    )
+
+                        ],
+                      ),
                   ],
                 ),
               ),
               //  ),
 
-              SizedBox(
-                height: 30,
+              const SizedBox(
+                height: 20,
               ),
 
               Row(
@@ -177,7 +180,10 @@ class Myhome extends StatelessWidget {
                           size: 30,
                         ),
                       ),
-                      const Text("Profile"),
+                      Text(
+                        "Profile",
+                        style: GoogleFonts.openSans(),
+                      ),
                     ],
                   ),
                   Column(
@@ -193,7 +199,10 @@ class Myhome extends StatelessWidget {
                           size: 30,
                         ),
                       ),
-                     const Text("Payment")
+                      Text(
+                        "Payment",
+                        style: GoogleFonts.openSans(),
+                      )
                     ],
                   ),
                   Column(
@@ -209,7 +218,10 @@ class Myhome extends StatelessWidget {
                           size: 30,
                         ),
                       ),
-                      const Text("Withdraw")
+                      Text(
+                        "Withdraw",
+                        style: GoogleFonts.openSans(),
+                      )
                     ],
                   ),
                   Column(
@@ -224,13 +236,16 @@ class Myhome extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      const Text("Transaction")
+                      Text(
+                        "Transaction",
+                        style: GoogleFonts.openSans(),
+                      )
                     ],
                   ),
                 ],
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -248,7 +263,10 @@ class Myhome extends StatelessWidget {
                           size: 30,
                         ),
                       ),
-                      const Text("Loans"),
+                      Text(
+                        "Loans",
+                        style: GoogleFonts.openSans(),
+                      ),
                     ],
                   ),
                   Column(
@@ -264,7 +282,10 @@ class Myhome extends StatelessWidget {
                           size: 30,
                         ),
                       ),
-                      const Text("Credit Card")
+                      Text(
+                        "Credit Card",
+                        style: GoogleFonts.openSans(),
+                      )
                     ],
                   ),
                   Column(
@@ -273,14 +294,19 @@ class Myhome extends StatelessWidget {
                         width: 50,
                         height: 50,
                         decoration: const BoxDecoration(
-                            color: Color(0xc21921ce), shape: BoxShape.circle,),
+                          color: Color(0xc21921ce),
+                          shape: BoxShape.circle,
+                        ),
                         child: const Icon(
                           FontAwesomeIcons.solidChartBar,
                           color: Colors.white,
                           size: 30,
                         ),
                       ),
-                      const Text("Deposits")
+                      Text(
+                        "Deposits",
+                        style: GoogleFonts.openSans(),
+                      )
                     ],
                   ),
                   Column(
@@ -295,49 +321,27 @@ class Myhome extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      const Text("Mutual fund")
+                      Text(
+                        "Mutual fund",
+                        style: GoogleFonts.openSans(),
+                      )
                     ],
                   ),
                 ],
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
               Text(
                 "Recent Transaction",
-                style: TextStyle(
+                style: GoogleFonts.openSans(
                     color: Colors.indigo[500],
                     fontWeight: FontWeight.bold,
-                    fontSize: 32),
+                    fontSize: 22),
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
-              ListTile(
-                leading: Container(
-                    width: 50,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                     color: const Color(0xc910259a),
-                   ),
-                    child: Icon(FontAwesomeIcons.creditCard,color: Colors.white,)
-                ),
-                title: Text("Cash Withdrawal",style: TextStyle(color: Color(0xd9353434),fontWeight: FontWeight.bold,fontSize: 18),),
-                subtitle: Text("11.11.24.Sept",style: TextStyle(color: Color(0xd9353434)),),
-                trailing: Text("\$ 546",style: TextStyle(color:Color(0xd9353434),fontWeight: FontWeight.bold,fontSize: 18),),
-              ),
-               const Padding(
-                 padding: const EdgeInsets.only(left: 48.0,top: 10,bottom: 10),
-                 child: const DottedLine(
-                   alignment: WrapAlignment.end,
-                    lineThickness: 3,
-                    dashLength: 20,
-                     lineLength: 331,
-                     dashColor: Colors.black45,
-                  ),
-               ),
-
               ListTile(
                 leading: Container(
                     width: 50,
@@ -346,19 +350,36 @@ class Myhome extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50),
                       color: const Color(0xc910259a),
                     ),
-                    child: const Icon(FontAwesomeIcons.checkCircle,color: Colors.white,)
+                    child: const Icon(
+                      FontAwesomeIcons.creditCard,
+                      color: Colors.white,
+                    )),
+                title: Text(
+                  "Cash Withdrawal",
+                  style: GoogleFonts.openSans(
+                      color: Color(0xd9353434),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14),
                 ),
-                title:const Text("Payment",style: TextStyle(color: Color(0xd9353434),fontWeight: FontWeight.bold,fontSize: 18),),
-                subtitle: const Text("11.11.24.Sept",style: TextStyle(color: Color(0xd9353434)),),
-                trailing: const Text("\$ 456",style: TextStyle(color:Color(0xd9353434),fontWeight: FontWeight.bold,fontSize: 18),),
+                subtitle: Text(
+                  "11.11.24.Sept",
+                  style: GoogleFonts.openSans(color: Color(0xd9353434)),
+                ),
+                trailing: Text(
+                  "\$ 546",
+                  style: GoogleFonts.openSans(
+                      color: Color(0xd9353434),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14),
+                ),
               ),
               const Padding(
-                padding: const EdgeInsets.only(left: 48.0,top: 10,bottom: 10),
-                child: const DottedLine(
+                padding: EdgeInsets.only(left: 58.0, top: 4, bottom: 4),
+                child: DottedLine(
                   alignment: WrapAlignment.end,
-                  lineThickness: 3,
-                  dashLength: 20,
-                  lineLength: 331,
+                  lineThickness: 2,
+                  dashLength: 8,
+                  lineLength: 259,
                   dashColor: Colors.black45,
                 ),
               ),
@@ -371,19 +392,36 @@ class Myhome extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50),
                       color: const Color(0xc910259a),
                     ),
-                    child: Icon(FontAwesomeIcons.clipboardList,color: Colors.white,)
+                    child: const Icon(
+                      FontAwesomeIcons.checkCircle,
+                      color: Colors.white,
+                    )),
+                title: Text(
+                  "Payment",
+                  style: GoogleFonts.openSans(
+                      color: const Color(0xd9353434),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14),
                 ),
-                title: Text("Monthly Subscribe",style: TextStyle(color: Color(0xd9353434),fontWeight: FontWeight.bold,fontSize: 18),),
-                subtitle: Text("11.11.24.Sept",style: TextStyle(color: Color(0xd9353434)),),
-                trailing: Text("\$ 789",style: TextStyle(color:Color(0xd9353434),fontWeight: FontWeight.bold,fontSize: 18),),
+                subtitle: Text(
+                  "11.11.24.Sept",
+                  style: GoogleFonts.openSans(color: const Color(0xd9353434)),
+                ),
+                trailing: Text(
+                  "\$ 456",
+                  style: GoogleFonts.openSans(
+                      color: const Color(0xd9353434),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14),
+                ),
               ),
               const Padding(
-                padding: const EdgeInsets.only(left: 48.0,top: 10,bottom: 10),
-                child: const DottedLine(
+                padding: EdgeInsets.only(left: 58.0, top: 4, bottom: 4),
+                child: DottedLine(
                   alignment: WrapAlignment.end,
-                  lineThickness: 3,
-                  dashLength: 20,
-                  lineLength: 331,
+                  lineThickness: 2,
+                  dashLength: 8,
+                  lineLength: 259,
                   dashColor: Colors.black45,
                 ),
               ),
@@ -396,254 +434,74 @@ class Myhome extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50),
                       color: const Color(0xc910259a),
                     ),
-                    child: Icon(FontAwesomeIcons.bagShopping,color: Colors.white,)
+                    child: const Icon(
+                      FontAwesomeIcons.clipboardList,
+                      color: Colors.white,
+                    )),
+                title: Text(
+                  "Monthly Subscribe",
+                  style: GoogleFonts.openSans(
+                      color: const Color(0xd9353434),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14),
                 ),
-                title: Text("Grocery Store",style: TextStyle(color: Color(0xd9353434),fontWeight: FontWeight.bold,fontSize: 18),),
-                subtitle: Text("11.11.24.Sept",style: TextStyle(color: Color(0xd9353434)),),
-                trailing: Text("\$ 123",style: TextStyle(color:Color(0xd9353434),fontWeight: FontWeight.bold,fontSize: 18),),
+                subtitle: Text(
+                  "11.11.24.Sept",
+                  style: GoogleFonts.openSans(color: const Color(0xd9353434)),
+                ),
+                trailing: Text(
+                  "\$ 789",
+                  style: GoogleFonts.openSans(
+                      color: const Color(0xd9353434),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14),
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(left: 58.0, top: 4, bottom: 4),
+                child: DottedLine(
+                  alignment: WrapAlignment.end,
+                  lineThickness: 2,
+                  dashLength: 8,
+                  lineLength: 259,
+                  dashColor: Colors.black45,
+                ),
               ),
 
-
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //   children: [
-              //     Row(children: [
-              //       Container(
-              //           width: 50,
-              //           height: 50,
-              //           decoration: BoxDecoration(
-              //             borderRadius: BorderRadius.circular(50),
-              //             color: const Color(0xc910259a),
-              //           ),
-              //           child: const Icon(
-              //             FontAwesomeIcons.creditCard,
-              //             color: Colors.white,
-              //           )),
-              //       const SizedBox(
-              //         width: 15,
-              //       ),
-              //       const Column(
-              //         crossAxisAlignment: CrossAxisAlignment.start,
-              //         children: [
-              //           Text(
-              //             "Cash withdrawal",
-              //             style: TextStyle(
-              //                 color: Color(0xd9525050),
-              //                 fontWeight: FontWeight.bold,
-              //                 fontSize: 24),
-              //           ),
-              //           Text(
-              //             "11.11.24.Sept",
-              //             style: TextStyle(
-              //                 color: Color(0xd9525050),
-              //                 fontWeight: FontWeight.bold,
-              //                 fontSize: 18),
-              //           ),
-              //         ],
-              //       ),
-              //     ]),
-              //     const SizedBox(),
-              //     const Text(
-              //       "\$ 540",
-              //       style: TextStyle(color:Color(0xd9525050),fontSize: 24, fontWeight: FontWeight.bold),
-              //     )
-              //   ],
-              // ),
-              // const SizedBox(
-              //   height: 25,
-              // ),
-              // const Padding(
-              //   padding: const EdgeInsets.only(left: 80.0),
-              //   child: DottedLine(
-              //     lineThickness: 3,
-              //     dashLength: 20,
-              //     lineLength: 331,
-              //     dashColor: Colors.black45,
-              //   ),
-              // ),
-              // const SizedBox(
-              //   height: 25,
-              // ),
-
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //   children: [
-              //     Row(children: [
-              //       Container(
-              //           width: 50,
-              //           height: 50,
-              //           decoration: BoxDecoration(
-              //             borderRadius: BorderRadius.circular(50),
-              //             color: const Color(0xc910259a),
-              //           ),
-              //           child: const Icon(
-              //             FontAwesomeIcons.circleCheck,
-              //             color: Colors.white,
-              //           )),
-              //       const SizedBox(
-              //         width: 15,
-              //       ),
-              //       const Column(
-              //         crossAxisAlignment: CrossAxisAlignment.start,
-              //         children: [
-              //           Text(
-              //             "Payment",
-              //             style: TextStyle(
-              //                 color: Color(0xd9525050),
-              //                 fontWeight: FontWeight.bold,
-              //                 fontSize: 24),
-              //           ),
-              //           Text(
-              //             "11.11.24.Sept",
-              //             style: TextStyle(
-              //                 color: Color(0xd9525050),
-              //                 fontWeight: FontWeight.bold,
-              //                 fontSize: 18),
-              //           ),
-              //         ],
-              //       ),
-              //     ]),
-              //     const SizedBox(
-              //       width: 60,
-              //     ),
-              //     const Text(
-              //       "\$ 456",
-              //       style: TextStyle(color:Color(0xd9525050),fontSize: 24, fontWeight: FontWeight.bold),
-              //     )
-              //   ],
-              // ),
-              // const SizedBox(
-              //   height: 25,
-              // ),
-              // const Padding(
-              //   padding: const EdgeInsets.only(left: 80.0),
-              //   child: DottedLine(
-              //     lineThickness: 3,
-              //     dashLength: 20,
-              //     lineLength: 331,
-              //     dashColor: Colors.black45,
-              //   ),
-              // ),
-              // const SizedBox(
-              //   height: 25,
-              // ),
-
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //   children: [
-              //     Row(children: [
-              //       Container(
-              //           width: 50,
-              //           height: 50,
-              //           decoration: BoxDecoration(
-              //             borderRadius: BorderRadius.circular(50),
-              //             color: const Color(0xc910259a),
-              //           ),
-              //           child: const Icon(
-              //             FontAwesomeIcons.clipboardList,
-              //             color: Colors.white,
-              //           )),
-              //       const SizedBox(
-              //         width: 15,
-              //       ),
-              //       const Column(
-              //         crossAxisAlignment: CrossAxisAlignment.start,
-              //         children: [
-              //           Text(
-              //             "Monthly Subscribe",
-              //             style: TextStyle(
-              //                 color: Color(0xd9525050),
-              //                 fontWeight: FontWeight.bold,
-              //                 fontSize: 24),
-              //           ),
-              //           Text(
-              //             "11.11.24.Sept",
-              //             style: TextStyle(
-              //                 color: Color(0xd9525050),
-              //                 fontWeight: FontWeight.bold,
-              //                 fontSize: 18),
-              //           ),
-              //         ],
-              //       ),
-              //     ]),
-              //     // const SizedBox(),
-              //     const Text(
-              //       "\$ 540",
-              //       style: TextStyle(color: Color(0xd9525050),fontSize: 24, fontWeight: FontWeight.bold),
-              //     )
-              //   ],
-              // ),
-              // const SizedBox(
-              //   height: 25,
-              // ),
-              // const Padding(
-              //   padding: const EdgeInsets.only(left: 80.0),
-              //   child: DottedLine(
-              //     lineThickness: 3,
-              //     dashLength: 20,
-              //     lineLength: 331,
-              //     dashColor: Colors.black45,
-              //   ),
-              // ),
-              // const SizedBox(
-              //   height: 25,
-              // ),
-
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //   children: [
-              //     Row(children: [
-              //       Container(
-              //           width: 50,
-              //           height: 50,
-              //           decoration: BoxDecoration(
-              //             borderRadius: BorderRadius.circular(50),
-              //             color: const Color(0xc910259a),
-              //           ),
-              //           child: const Icon(
-              //             FontAwesomeIcons.bagShopping,
-              //             color: Colors.white,
-              //           )),
-              //       const SizedBox(
-              //         width: 15,
-              //       ),
-              //       const Column(
-              //         crossAxisAlignment: CrossAxisAlignment.start,
-              //         children: [
-              //           Text(
-              //             "Grocery Store",
-              //             style: TextStyle(
-              //                 color: Color(0xd9525050),
-              //                 fontWeight: FontWeight.bold,
-              //                 fontSize: 24),
-              //           ),
-              //           Text(
-              //             "11.11.24.Sept",
-              //             style: TextStyle(
-              //                 color: Color(0xd9525050),
-              //                 fontWeight: FontWeight.bold,
-              //                 fontSize: 18),
-              //           ),
-              //         ],
-              //       ),
-              //     ]),
-              //     const SizedBox(
-              //       width: 30,
-              //     ),
-              //     const Text(
-              //       "\$ 540",
-              //       style: TextStyle(color:Color(0xd9525050),fontSize: 24, fontWeight: FontWeight.bold),
-              //     )
-              //   ],
-              // ),
-              // const SizedBox(
-              //   height: 25,
-              // ),
-
+              ListTile(
+                leading: Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      color: const Color(0xc910259a),
+                    ),
+                    child: const Icon(
+                      FontAwesomeIcons.bagShopping,
+                      color: Colors.white,
+                    )),
+                title: Text(
+                  "Grocery Store",
+                  style: GoogleFonts.openSans(
+                      color: const Color(0xd9353434),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14),
+                ),
+                subtitle: Text(
+                  "11.11.24.Sept",
+                  style: GoogleFonts.openSans(color: const Color(0xd9353434)),
+                ),
+                trailing: Text(
+                  "\$ 123",
+                  style: GoogleFonts.openSans(
+                      color: const Color(0xd9353434),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14),
+                ),
+              ),
             ],
           ),
-        )
-      ],
-    ));
+
+    );
   }
 }
